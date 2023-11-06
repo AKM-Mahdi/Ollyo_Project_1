@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Gallery from "./COMPONENTS/Gallery/Gallery";
 
 function App() {
   const [selectedImages, setSelectedImages] = useState([]);
-  const [images, setImages] = useState([]);
+
+  const [images, setImages] = useState([
+    "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_640.jpg",
+    "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_640.jpg",
+    "https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_640.jpg",
+  ]);
+
+  useEffect(() => {
+    setImages(images);
+  }, []);
 
   const handleImageChange = (e) => {
     const newImages = e.target.files;
