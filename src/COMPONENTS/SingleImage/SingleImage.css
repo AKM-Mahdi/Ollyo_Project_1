@@ -1,0 +1,7 @@
+.selected {
+  border: 2px solid var(--color-primary);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+}

@@ -1,0 +1,63 @@
+.galleryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: var(--color-secondary);
+}
+
+/* Gallery design  */
+.galleryLayouts {
+  padding: 20px;
+}
+/* Gallery grid  */
+.galleryImagesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* choose images button  */
+.addImagesBtn {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Style for the input */
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Style for the button */
+.addImagesBtn::before {
+  content: "Choose Image"; /* or any text you want */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .galleryLayouts {
+    padding: 15px;
+  }
+  .galleryImagesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
